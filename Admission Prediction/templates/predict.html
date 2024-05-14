@@ -1,0 +1,271 @@
+<!doctype html>
+<!--[if IE 9]> <html class="no-js ie9 fixed-layout" lang="en"> <![endif]-->
+<!--[if gt IE 9]><!--> <html class="no-js " lang="en"> <!--<![endif]-->
+<head>
+
+    <!-- Basic -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <!-- Mobile Meta -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    
+    <!-- Site Meta -->
+    <title>Admission Predictor</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="shortcut icon" type="image/jpg" href="../static/images/logo.png"/>
+
+	<!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,500,700,900" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Droid+Serif:400,400i,700,700i" rel="stylesheet"> 
+	
+    <!-- Custom & Default Styles -->
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='predict/css/bootstrap.min.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict/css/font-awesome.min.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict/css/carousel.css')}}" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict/css/animate.css')}}"/>
+    <link rel="stylesheet" href="{{ url_for('static', filename='predict/style.css')}}" />
+
+    <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <link href="https://fonts.googleapis.com/css?family=Montserrat:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    
+        <title>University Predictor</title>
+        
+        <!-- Bootstrap core CSS -->
+        <!-- <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"> -->
+    
+        <!-- Additional CSS Files -->
+        <link rel="stylesheet" href="../static/home/css/fontawesome.css">
+    <link rel="stylesheet" href="../static/home/css/templatemo-grad-school.css">
+    <link rel="stylesheet" href="../static/home/css/owl.css">
+    <link rel="stylesheet" href="../static/home/css/lightbox.css">
+    <link rel="stylesheet" href="../static/home/css/style.css">
+
+</head>
+<body background="../static/images/choosing-bg.jpg">         
+      <!--header-->
+      <header class="main-header clearfix" role="header"  style="background-color: #D7D5E2;">
+        <div class="logo">
+          <a class="navbar-brand"><img src="../static/assets/images/logo.png" alt=""></a>
+      </div>
+        <a href="#menu" class="menu-link"><i class="fa fa-bars"></i></a>
+        <nav id="menu" class="main-nav" role="navigation">
+          <ul class="main-menu">
+            <li><a href="/">Home</a></li>
+        <li><a href="/university">Universities</a></li>
+        <li><a href="/">About Us</a></li>
+        <li><a href="/contact">Contact Us</a></li>
+           
+          </ul>
+        </nav>
+      </header>
+        
+        <br><br><br><br><br><br>
+        
+    <section>
+    <div class="container-fluid" >
+    <div class="row" >
+      <div class="col-lg-10 col-lg-offset-1 well"  style="background-color: #D7D5E2;">
+        <div class="panel panel-info"  style="background-color: #D7D5E2;">
+          <div class="panel-heading " >
+            <h3 class="panel-title text-center">Profile Evaluation Tool <br>
+                            
+                              <font color="blue">Get Your Profile Evaluated for MS in US for Free !</font></h4>
+                      </div>
+                      <div class="panel-body"  style="background-color: #D7D5E2;">
+                          <form style="background-color: #D7D5E2;" action="{{url_for('predict')}}" method="post" class="form-horizontal row">
+                              
+                              <fieldset>
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  <h5 class="panel-title text-center">GRE Scores</h5>
+                                              </div>
+                                              <div class="panel-body">
+                                                  <div class="form-group">
+                                                      <label class="control-label col-sm-4" for="GRE_result">GRE Quant:</label>
+                                                      <div class="col-sm-8">
+                                                          <div class="input-group">
+                                                              <input type="number" class="form-control" name="GRE Quant" id="GRE_result" step="1" min="130" max="170" required>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+                                                  <div class="form-group">
+                                                    <label class="control-label col-sm-4" for="GRE_result">GRE Verbal:</label>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control" name="GRE Verbal" id="GRE_result" step="1" min="130" max="170" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                </div>
+                                              </div>
+                                          </div>
+                                      
+                                      <div class="col-lg-12">
+                                          <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  <h5 class="panel-title text-center">English Scores</h5>
+                                              </div>
+                                              <div class="panel-body">
+                                                  <div class="form-group">
+                                                    <label class="control-label col-sm-4" for="Hsc_result"> TOEFLE Scores</label>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control" name="TOEFL Score" id="Hsc_result" step="1" min="90" max="120" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="row">
+                                        
+                                      <div class="col-lg-12">
+                                          <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  <h5 class="panel-title text-center">Graduation Details</Details></h5>
+                                              </div>
+                                              <div class="panel-body">
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4"> University Name</label>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="text" class="form-control" name="University" id="Hsc_result" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4" >CGPA</label>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="number" name="CGPA" class="form-control" id="grad_result" step="0.01"  min="1" max="10" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                              </div>
+  
+  
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <!-- ************ End of Graduation Level************** -->
+  
+                                  <!-- ************ Start of Masters Level (if any)************** -->
+                                  <div class="row">
+                                      <div class="col-lg-12">
+                                          <div class="panel panel-default">
+                                              <div class="panel-heading">
+                                                  <h5 class="panel-title text-center">Target University</h5>
+                                              </div>
+                                         <div class="panel-body">
+                                                  <div class="form-group">
+                                                      <label for="University" class="control-label col-sm-4">University Name</label>
+                                                      <div class="col-sm-4">
+                                                          <select name="University Rating" id="University" class="form-control">
+                                                            <option value="" selected disabled>Select One</option>
+                                                            <option value="1">Princeton University</option>
+                                                            <option value="1">Yale University</option>
+                                                            <option value="2">Cornell University</option>
+                                                            <option value="3">Carnegie Mellon University</option>
+                                                            <option value="3">University of Michigan</option>
+                                                            <option value="4">Duke University</option>
+                                                            <option value="5">Boston University</option>
+                                                            <option value="4">University of California, Berkeley</option>
+                                                            <option value="5">Georgia Institute of Technology</option>
+                                                            <option value="2">Carnegie Mellon University</option>
+                                                        </select>
+                                                      </div>
+                                                      <!-- <input type="number" name="University Rating" placeholder="University Rating" required="required" min="1" max="5"/> -->
+                                                  </div>
+                                                  <div class="form-group">
+                                                      <label class="control-label col-sm-4" for="sop_result" >SOP</label>
+                                                      <div class="col-sm-8">
+                                                          <div class="input-group">
+                                                              <input type="number" class="form-control" name="SOP" id="sop_result" step="0.5" min="1" max="10" required>
+                                                          </div>
+                                                      </div>
+                                                  </div>
+
+                                                  <div class="form-group">
+                                                    <label class="control-label col-sm-4" for="lor_result">LOR</label>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control" name="LOR" id="lor_result" step="0.5" min="1" max="10" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="control-label col-sm-4" for="RP_result">Research Paper</label>
+                                                    <div class="col-sm-8">
+                                                        <div class="input-group">
+                                                            <input type="number" class="form-control" name="Research" id="RP_result" min="0" max="1" required>
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                              </div>
+                                          </div>
+                                      </div>
+                              </fieldset>
+                      </div>
+                      <div class="panel-footer">
+                          <div class="row">
+                              <div class="col-lg-12">
+                                  <div class="checkbox">
+                                      <label class="text-warning">
+                                          <input type="checkbox" id="all_correct" name="all_correct" value="1" required> I hereby declare that all the above information are correct
+                                  </div>
+                              </div>
+                          </div>
+                          <div class=" text-center">
+                            <input type="submit" style="color: black; padding: 6px; outline-color: #D7D5E2; padding-left: 10px; padding-right: 10px; font-size: large; font-weight: bold;"></input>
+                            </div>
+                  </div>
+                  </form>
+              </div>
+          </div>
+      </div>
+      </div>
+                </div>
+            </div>
+            <div class="container-fluid" >
+                <div class="row" >
+                  <div class="col-lg-10 col-lg-offset-1 well"  style="background-color: #D7D5E2;">
+                    <div class="panel panel-info"  style="background-color: #D7D5E2;">
+                      <div class="panel-heading " >
+                        <h2 class="text-center">{{prediction_text}} <br></h2>
+                        <h4 style="margin-top: 5%;">Note:  The following prediction is based solely on available data, and we do not guarantee the admission.</h4>
+                      </div>
+                    </div>
+                  </div>
+                  </div>
+                  </div>
+            
+        </section>
+        <br><br><br><br><br><br>
+        
+       
+            </div><!-- end container -->
+        </div><!-- end copy -->
+    </div><!-- end wrapper -->
+    
+
+    <!-- jQuery Files -->
+    <script src="../static/js/jquery.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/carousel.js"></script>
+    <script src="../static/js/animate.js"></script>
+    <script src="../static/js/custom.js"></script>
+
+</body>
+</html>
